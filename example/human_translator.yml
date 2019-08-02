@@ -1,0 +1,42 @@
+source_language: en
+not_translated_marker: TT
+
+excluded_files:
+  - inflections
+  - rails
+  - genders
+
+manual:
+  headers:
+    - 'Rule'
+    - 'Example OK (EN >>> ES)'
+    - 'Example NOT OK (EN >>> ES)'
+  content:
+    -
+      - 'The file consists of 18 tabs: this tab and 17 tabs conaining text for translations.'
+      - '---'
+      - '---'
+    -
+      - 'Column "A" contains English texts that should be translated to Your Language.'
+      - '---'
+      - '---'
+    -
+      - 'Put your translations into column "B".'
+      - '---'
+      - '---'
+    -
+      - 'If a cell in column "A" is blank, do not translate this row.'
+      - '---'
+      - '---'
+    -
+      - 'Some texts contain variables in brace claws - do not translate variables'
+      - 'Module changed to %{module} >>> Módulo cambiado a %{module}'
+      - 'Module changed to %{module} >>> Módulo cambiado a %{módulo}'
+    -
+      - 'Do not sort rows in any tab.'
+      - '---'
+      - '---'
+    -
+      - 'Do not change anything in column "C".'
+      - '---'
+      - '---'
