@@ -1,5 +1,8 @@
-source_language: en
-not_translated_marker: TT
+base_language: en
+missing_translation_marker: TT
+exports_directory: vendor/human_translations
+imports_directory: vendor/imports
+
 
 excluded_files:
   - inflections

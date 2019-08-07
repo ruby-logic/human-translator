@@ -22,6 +22,17 @@ class ExcelTranslationCompiler
     end
   end
 
+  def tab_name(language_struct)
+    [
+      language_struct.index,
+      '-',
+      File.basename(
+        language_struct.basename,
+        ".#{language_struct.language}.yml"
+      )
+    ].join(' ')
+  end
+
   private
 
   attr_accessor :only_missing, :base_language, :config, :write_manual,
@@ -71,19 +82,8 @@ class ExcelTranslationCompiler
     ]
   end
 
-  def tab_name(language_struct)
-    [
-      language_struct.index,
-      '-',
-      File.basename(
-        language_struct.basename,
-        ".#{language_struct.language}.yml"
-      )
-    ].join(' ')
-  end
-
   def initialize_exports_directory
-    exports_directory = Rails.root.join('vendor', 'human_translations')
+    exports_directory = Rails.root.join(config['exports_directory'])
     return if File.exist?(exports_directory)
 
     FileUtils.mkdir_p(exports_directory)

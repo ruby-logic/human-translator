@@ -9,4 +9,8 @@ namespace :human_translator do
   task generate_all: :environment do
     HumanTranslatorTask.new(only_missing: false).generate_translation_files
   end
+
+  task import_all: :environment do
+    HumanTranslatorTask.new(only_missing: false).import_translation_files
+  end
 end
